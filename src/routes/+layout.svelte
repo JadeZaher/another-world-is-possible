@@ -1,42 +1,63 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fade, fly } from 'svelte/transition';
-	import { Menu, X} from 'lucide-svelte';
+	import { fade, fly, slide  } from 'svelte/transition';
+	import { tap } from 'svelte-gestures';
+	import { Menu, X } from 'lucide-svelte';
+	import earth from '$lib/images/Rotating_earth_animated_transparent.gif'
 	import '../app.css';
-	let isMenuOpen = false;
+	let isMenuOpen:boolean = false;
+	let isLoaded:boolean = false;
 	
-	let cursorX = 0;
-	let cursorY = 0;
+	let cursorX:number = 0;
+	let cursorY:number = 0;
+	let width:number = 0;
+
+	let lastScrollY = 0;
+	let visible = false;
+
+	const handleScroll = () => {
+		const currentScrollY = window.scrollY;
+		visible = (currentScrollY <= lastScrollY || currentScrollY < 100); // Show on scroll up or top
+
+		lastScrollY = currentScrollY;
+	};
+
 	onMount(() => {
-	  const handleMouseMove = (e: MouseEvent) => {
-		cursorX = e.clientX;
-		cursorY = e.clientY;
-	  };
-  
-	  window.addEventListener('mousemove', handleMouseMove);
-  
-	  return () => {
+		const handleMouseMove = (e: MouseEvent) => {
+			cursorX = e.clientX;
+			cursorY = e.clientY;
+		};
+		
+		window.addEventListener('scroll', handleScroll);
+		window.addEventListener('mousemove', handleMouseMove);
+		
+		return () => {
+		window.removeEventListener('scroll', handleScroll);
 		window.removeEventListener('mousemove', handleMouseMove);
 	  };
 	});
+	const handleOnLoad = () : void => {
+		isLoaded = true;
+	};
 </script>
 
   
 <svelte:head>
 	<title>Another World is Possible</title>
 </svelte:head>
-	<div class=" min-h-screen max-w-screen overflow-hidden">
-
-		<nav class="fixed top-0 left-0 w-full z-40 text-white bg-black mix-blend-difference">
-			<div class=" w-full h-max mx-auto px-4 py-6 flex justify-between items-center">
-				<h1 in:fade="{{ duration: 500 }}" class="text-2xl font-bold">
-					Another World is Possible
-				</h1>
-				<button on:click={() => (isMenuOpen = !isMenuOpen)}>
+<svelte:window on:load="{()=>handleOnLoad()}" bind:outerWidth={width}/>
+	<img src={earth} class=" h-fit z-[5] pointer-events-none fixed left-[10px] duration-[3s] ease-out mix-blend-normal"
+	style="width:{"10%"}; top:{"10%" };left:{(lastScrollY > 400 && lastScrollY < 5000 ? 90: lastScrollY / 1000 + 5 )}%;"
+	alt="" srcset=""/>
+	
+	<div class=" min-h-screen w-screen overflow-hidden">
+		<nav class={` pointer-events-auto z-50 fixed top-0 left-0 w-full text-white bg-black duration-[.2s] ease-linear mix-blend-difference`}>
+			<div class=" w-full h-max mx-auto px-4 py-6 flex justify-between items-center cursor-pointer">
+				<button class=" z-40 w-full"  on:click={() => (isMenuOpen = !isMenuOpen)} on:tap={() => (isMenuOpen = !isMenuOpen)} >
 					{#if isMenuOpen}
-					<X size={24} class="z-50" />
+					<X size={24} class="z-[102]" />
 					{:else}
-					<Menu size={24} class="z-50 " />
+					<Menu size={24} class="z-[101] " />
 					{/if}
 				</button>
 			</div>	
@@ -46,17 +67,30 @@
 		<div
 		in:fly="{{ x: '100%', duration: 300 }}"
 		out:fly="{{ x: '100%', duration: 300 }}"
-		class="fixed top-0 right-0 w-full sm:w-64 h-full text-white bg-red bg-black bg-opacity-90 z-30 flex items-center justify-center"
+		class="fixed top-0 right-0 w-full sm:w-64 h-full text-white bg-red bg-black bg-opacity-60 z-30 flex items-center justify-center "
 		>
-			<ul class="text-center space-y-8">
-				<li><a href="#synopsis" class="text-2xl hover:text-gray-300 transition-colors">Synopsis</a></li>
-				<li><a href="#behind-the-scenes" class="text-2xl hover:text-gray-300 transition-colors">Behind the Scenes</a></li>
-				<li><a href="#support" class="text-2xl hover:text-gray-300 transition-colors">Support</a></li>
+			<ul class="text-center space-y-8 flex justify-start flex-col">
+				<a href="#start" class="text-2xl  transition-colors">
+					<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+						Start
+					</button>
+					</a>
+				<a href="#synopsis" class="text-2xl  transition-colors">
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+					Synopsis
+				</button>
+				</a>
+				<button class="border-b-[1px] rounded-[5px] p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+					<li><a href="#behind-the-scenes" class="text-2xl hover:text-green-300 transition-colors">Behind the Scenes</a></li>
+				</button>
+				<button class="border-b-[1px] rounded-[5px] p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+					<li><a href="#support" class="text-2xl hover:text-green-300 transition-colors">Support</a></li>
+				</button>
 			</ul>
 		</div>
 	{/if}
 	<div
-	class="fixed w-8 h-8 rounded-full border-2 border-white pointer-events-none z-40 mix-blend-difference"
+	class="fixed w-8 h-8 rounded-full border-2 border-white pointer-events-none  z-[100] mix-blend-difference"
 	style="transform: translate(-50%, -50%); left: {cursorX}px; top: {cursorY}px;"
 	/>
 	
@@ -64,14 +98,9 @@
 		<slot />
 	</main>
 	
-	<footer class="bg-black min-h-[60vh] py-12">
+	<footer class="bg-black text-white h-[20vh]">
 		<div class="container mx-auto px-4 text-center">
 			<p class="mb-4">&copy; 2024 Another World is Possible. All rights reserved.</p>
-			<div class="flex justify-center space-x-4">
-				<a href="/" class="hover:text-gray-300 transition-colors">Facebook</a>
-				<a href="/" class="hover:text-gray-300 transition-colors">Twitter</a>
-				<a href="/" class="hover:text-gray-300 transition-colors">Instagram</a>
-			</div>
 		</div>
 	</footer>
 	

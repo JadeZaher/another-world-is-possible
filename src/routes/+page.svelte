@@ -1,112 +1,73 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
-	import { Play, Pause } from 'lucide-svelte';
-  
-	let isVideoPlaying = true;
-	let videoElement: HTMLVideoElement;
-  
-	function toggleVideo() {
-	  if (videoElement) {
-		if (isVideoPlaying) {
-		  videoElement.pause();
-		} else {
-		  videoElement.play();
-		}
-		isVideoPlaying = !isVideoPlaying;
-	  }
-	}
+	import { Youtube } from 'svelte-youtube-lite';
+	import synopsis from "$lib/images/awp-img1.png";
+	import bhScene1 from "$lib/images/awp-img2.png";
+	import bhScene2 from "$lib/images/awp-img3.png";
+    const videoId = 'T7Gr3dljEVE'; // Replace with your actual video ID  
 </script>
 
-<div class="relative min-h-screen w-screen bg-black text-white overflow-hidden">
+<div class="relative min-h-screen w-screen flex flex-col justify-center bg-white text-black overflow-hidden">
 
 	<section class="relative h-screen">
-	  <video
-		bind:this={videoElement}
-		autoplay
-		loop
-		muted
-		playsinline
-		class="absolute top-0 left-0 w-full h-full object-cover"
-	  >
-		<!-- <source src="/placeholder.mp4" type="video/mp4" /> -->
-	  </video>
-	  <div class="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
-		<div class="text-center">
-		  <h2 in:fade="{{ duration: 500, delay: 200 }}" class="text-4xl sm:text-6xl font-bold mb-4">
-			Another World is Possible
-		  </h2>
+		<div  id="start" class="absolute inset-0 flex items-center justify-center pointer-events-none z-20 drop-shadow-2xl">
+			<div class="text-center">
+				<h2 in:fade="{{ duration: 500, delay: 200 }}" class="text-4xl sm:text-6xl font-bold mb-4 pointer-events-none">
+					Another World is Possible
+				</h2>
+				<div class=" rounded-[25px] overflow-hidden m-[10px] pointer-events-auto">
+					<Youtube id={videoId} showTitle="{false}"  />
+				</div>
 		  <p in:fade="{{ duration: 500, delay: 400 }}" class="text-xl sm:text-2xl mb-8">
-			A journey beyond imagination
+			By Zachary Marlow
 		  </p>
-		  <button
-			in:fade="{{ duration: 500, delay: 600 }}"
-			class="bg-white text-black px-8 py-3 rounded-full text-lg font-semibold hover:bg-opacity-90 transition-colors"
-		  >
-			Watch Trailer
-		  </button>
 		</div>
-	  </div>
-	  <button
-		on:click={toggleVideo}
-		class="absolute bottom-8 right-8 bg-white bg-opacity-20 p-2 rounded-full hover:bg-opacity-30 transition-colors"
-	  >
-		{#if isVideoPlaying}
-		  <Pause size={24} />
-		{:else}
-		  <Play size={24} />
-		{/if}
-	  </button>
+	
+	</div>
+
 	</section>
   
-	<section id="synopsis" class="py-24 bg-gray-900">
+	<section id="synopsis" class="py-24 text-blue-300 w-full bg-teal-700 min-h-[80vh]">
 	  <div class="container mx-auto px-4">
 		<h3 class="text-3xl font-bold mb-8">Synopsis</h3>
-		<p class="text-lg leading-relaxed">
-		  "Another World is Possible" takes viewers on a breathtaking journey through alternate realities, challenging our perception of what's possible. As the boundaries between worlds blur, our protagonists must navigate the consequences of their choices across multiple dimensions, ultimately discovering that the key to saving their own world lies in the connections they forge across the multiverse.
+		<p class="text-lg leading-relaxed py-10">
+			"Another World is Possible". <br/>
+			All that means is we explore alternative ways we can be structuring our world. 
+			We have evolved the ability to shape our own reality more than any species on this planet. 
+			We are responsible and capable of so much. 
+			When we come together in the right ways for the right reasons we can do all goods and undo all evils.
+			But when we fail to do that we can end up facing disasterous conflicts.
 		</p>
+		<img
+		src={synopsis}
+		  alt="Behind the scenes 1"
+		  class="w-full h-auto rounded-lg mb-4"
+		/>
 	  </div>
 	</section>
   
-	<section id="behind-the-scenes" class="py-24 bg-gray-900">
+	<section id="behind-the-scenes" class=" py-48 text-blue-950 z-50 bg-teal-500 h-full">
 	  <div class="container mx-auto px-4">
-		<h3 class="text-3xl font-bold mb-12">Behind the Scenes</h3>
+		<h3 class="text-3xl font-bold mb-12">We will look everywhere</h3>
 		<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
 		  <div>
 			<img
-			  alt="Behind the scenes 1"
-			  class="w-full h-auto rounded-lg mb-4"
+			src={bhScene1}
+			alt="Behind the scenes 1"
+			class="w-full h-auto rounded-lg mb-4"
 			/>
-			<p class="text-lg">Capturing the essence of multiple worlds on set.</p>
-		  </div>
-		  <div>
+			<p class="text-lg">For struggle and what we can do now to change it.</p>
+		</div>
+		<div>
 			<img
+			src={bhScene2}
 			  alt="Behind the scenes 2"
 			  class="w-full h-auto rounded-lg mb-4"
 			/>
-			<p class="text-lg">The visual effects team bringing alternate realities to life.</p>
+			<p class="text-lg">Listening people with a story, a vision, and a path forward for the world together.</p>
 		  </div>
 		</div>
 	  </div>
 	</section>
-
-	<section id="support" class="py-24 bg-black">
-		<div class="container mx-auto px-4">
-		  <h3 class="text-3xl font-bold mb-12">Support</h3>
-		  <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
-			{#each [1, 2, 3, 4] as i}
-			  <div class="text-center">
-				<img
-				  alt="Support Option {i}"
-				  class="w-full h-auto rounded-lg mb-4"
-				/>
-				<h4 class="text-xl font-semibold">Support</h4>
-				<p class="text-gray-400">Support</p>
-			  </div>
-			{/each}
-		  </div>
-		</div>
-	  </section>
-
   
 </div>
