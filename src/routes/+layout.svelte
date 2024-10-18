@@ -83,9 +83,9 @@
 				<button class="border-b-[1px] rounded-[5px] p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					<li><a href="#behind-the-scenes" class="text-2xl hover:text-green-300 transition-colors">Behind the Scenes</a></li>
 				</button>
-				<button class="border-b-[1px] rounded-[5px] p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<!-- <button class="border-b-[1px] rounded-[5px] p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					<li><a href="#support" class="text-2xl hover:text-green-300 transition-colors">Support</a></li>
-				</button>
+				</button> -->
 			</ul>
 		</div>
 	{/if}
@@ -98,7 +98,7 @@
 		<slot />
 	</main>
 	
-	<footer class="bg-black text-white h-[20vh]">
+	<footer class="bg-black text-white h-[10vh]">
 		<div class="container mx-auto px-4 text-center">
 			<p class="mb-4">&copy; 2024 Another World is Possible. All rights reserved.</p>
 		</div>
