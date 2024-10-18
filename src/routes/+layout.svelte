@@ -46,7 +46,7 @@
 	<title>Another World is Possible</title>
 </svelte:head>
 <svelte:window on:load="{()=>handleOnLoad()}" bind:outerWidth={width}/>
-	<img src={earth} class=" h-fit z-[5] pointer-events-none fixed left-[10px] duration-[3s] ease-out mix-blend-normal"
+	<img src={earth} class=" z-[5] pointer-events-none fixed left-[10px] duration-[3s] ease-out mix-blend-normal"
 	style="width:{"10%"}; top:{"10%" };left:{(lastScrollY > 400 && lastScrollY < 5000 ? 90: lastScrollY / 1000 + 5 )}%;"
 	alt="" srcset=""/>
 	
