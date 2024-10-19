@@ -67,7 +67,7 @@
 		<div
 		in:fly="{{ x: '100%', duration: 300 }}"
 		out:fly="{{ x: '100%', duration: 300 }}"
-		class="fixed top-0 right-0 w-full max-w-4xl px-10 h-full text-white bg-red bg-black bg-opacity-60 z-[101] flex items-center justify-center "
+		class="fixed top-0 right-0 w-full max-w-4xl px-10 h-full text-white bg-red bg-black bg-opacity-60 z-[101] flex items-center justify-center rounded-[2rem]"
 		>
 			<ul class="text-center space-y-8 flex justify-start flex-col">
 				<a href="#start" class="text-2xl  transition-colors">
