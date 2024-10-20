@@ -67,26 +67,26 @@
 		<div
 		in:fly="{{ x: '100%', duration: 300 }}"
 		out:fly="{{ x: '100%', duration: 300 }}"
-		class="fixed top-0 right-0 w-full max-w-4xl px-10 h-full text-white bg-red bg-black bg-opacity-60 z-[101] flex items-center justify-center rounded-[2rem]"
+		class="fixed top-0 right-0 w-full max-w-4xl px-10 h-full text-white bg-red bg-[#ecf0f1] bg-opacity-60 z-[101] flex items-center justify-center rounded-bl-[2rem]"
 		>
 			<ul class="text-center space-y-8 flex justify-start flex-col">
 				<a href="#start" class="text-2xl  transition-colors">
-					<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+					<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 						Start
 					</button>
 					</a>
 				<a href="#synopsis" class="text-2xl  transition-colors">
-				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					Synopsis
 				</button>
 				</a>
 				<a href="#TheProject" class="text-2xl  transition-colors">
-				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					The Project
 				</button>
 				</a>
 				<a href="#WhatImlookingforrightnow" class="text-2xl  transition-colors">
-				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					What We Need
 				</button>
 				</a>
