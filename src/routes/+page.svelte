@@ -13,15 +13,16 @@
 <div class="relative min-h-screen w-screen flex flex-col justify-center bg-white text-black overflow-hidden">
 
 	<section class="relative h-screen">
-		<div  id="start" class="absolute inset-0 flex items-center justify-center pointer-events-none z-40 drop-shadow-2xl">
+		<div  id="start" class="inset-0 flex animate-[fadeIn_1s_ease-in-out] items-center h-full justify-center pointer-events-none drop-shadow-2xl">
 			<div class="text-center">
-				<h2 in:fade="{{ duration: 500, delay: 200 }}" class="text-4xl sm:text-6xl font-bold mb-4 z-30 pointer-events-none">
+				<h2 class="text-4xl sm:text-6xl py-6 font-bold mb-4 z-[2] pointer-events-none">
 					Another World is Possible
 				</h2>
-				<div class=" rounded-[25px] overflow-hidden m-[10px] pointer-events-auto z-50">
+				<div clas=" w-screen"></div>
+				<div class=" rounded-[25px] overflow-hidden m-[10px] pointer-events-auto z-40">
 					<Youtube id={videoId} showTitle="{false}"  />
 				</div>
-		  <p in:fade="{{ duration: 500, delay: 400 }}" class="text-xl sm:text-2xl mb-8">
+		  <p  class="text-xl sm:text-2xl mb-8">
 			By Zachary Marlow
 		  </p>
 		</div>

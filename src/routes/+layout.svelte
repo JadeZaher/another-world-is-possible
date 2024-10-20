@@ -46,7 +46,7 @@
 	<title>Another World is Possible</title>
 </svelte:head>
 <svelte:window on:load="{()=>handleOnLoad()}" bind:outerWidth={width}/>
-	<img src={earth} class=" z-30 zbas pointer-events-none fixed left-[10px] duration-[3s] ease-out mix-blend-normal"
+	<img src={earth} class=" z-10 pointer-events-none fixed left-[10px] duration-[3s] ease-out mix-blend-normal"
 	style="width:{"10%"}; top:{"10%" };left:{(lastScrollY > 400 && lastScrollY < 5000 ? 90: lastScrollY / 1000 + 5 )}%;"
 	alt="" srcset=""/>
 	
@@ -71,7 +71,7 @@
 		>
 			<ul class="text-center space-y-8 flex justify-start flex-col">
 				<a href="#start" class="text-2xl  transition-colors">
-					<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+					<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 						Start
 					</button>
 					</a>
@@ -81,12 +81,12 @@
 				</button>
 				</a>
 				<a href="#TheProject" class="text-2xl  transition-colors">
-				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					The Project
 				</button>
 				</a>
 				<a href="#WhatImlookingforrightnow" class="text-2xl  transition-colors">
-				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-[#2ecc71] rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
+				<button class=" border-b-[1px] h-full w-full rounded-[5px] hover:text-green-300 p-2 bg-blend-color-burn bg-white text-black font-black shadow-slate-200 border-green-400 rounded-lb-md drop-shadow-sm" on:click={()=>(isMenuOpen = !isMenuOpen)} on:tap={()=>(isMenuOpen = !isMenuOpen)}>
 					What We Need
 				</button>
 				</a>
