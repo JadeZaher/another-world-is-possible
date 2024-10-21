@@ -78,34 +78,35 @@
 			alt="Behind the scenes 1"
 			class="w-full h-auto rounded-lg mb-4"
 			/>
-			<p class="font-bold py-4 pb-10 p-5 rounded-md text-black md:text-xl text-sm ">This documentary series intricately weaves together the most pressing social, ecological, 
-				and economic crises of our time, unveiling the system that drives these challenges and hinders real change. 
-				But this isn’t just a critique; it’s a visionary roadmap toward a new system—one that aspires to save our world.
-				Get ready for some mind-blowing ideas. 
-				</p>
-				<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm ">This documentary series intricately weaves together the most pressing social, ecological, 
-				Filmed across 16 U.S. states and 3 continents, our series features vibrant characters from all walks of life—from passionate youth in revolt to esteemed professors, 
-				</p>
+			<p class="font-bold py-4 pb-10 p-5 rounded-md text-black md:text-xl text-sm ">
+			This documentary series intricately weaves together the most pressing social, ecological, 
+			and economic crises of our time, unveiling the system that drives these challenges and hinders real change. 
+			But this isn’t just a critique; it’s a visionary roadmap toward a new system—one that aspires to save our world.
+			Get ready for some mind-blowing ideas. 
+			</p>
+			<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm ">This documentary series intricately weaves together the most pressing social, ecological, 
+			Filmed across 16 U.S. states and 3 continents, our series features vibrant characters from all walks of life—from passionate youth in revolt to esteemed professors, 
+			</p>
 				<img
 				src={wolf}
 				alt="Behind the scenes 1"
 				class="w-full h-auto rounded-lg mb-4"
 				/>
-				<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm">
-					scientists, activists, and indigenous leaders. 
-					You'll hear from legends like Noam Chomsky and countless other prominent figures, all voicing the urgent need for radical change and showcasing real-world solutions. 
-					That demonstrate a better future is within reach.
-				</p>
-					<img
-						src={communityleader}
-						alt="Behind the scenes 1"
-						class="w-full h-auto rounded-lg mb-4"
-					/>
-				<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm">
-				Through compelling storytelling, we explore our disconnection from nature, the historical roots of our current crises, and the possibilities and threats posed by technology. We shine a light on the various global movements advocating for change and rethinking everything—from currency and governance to food systems and societal organization. This series is a thrilling blend of dystopian narrative, action, and nature documentary, all while remaining deeply character-driven and hopeful.
-				Join us as we take viewers on a wild ride from bustling financial centers to ancient indigenous villages and into the innovative pockets of the future around the globe. This series is led by experts and driven by community voices, presenting a real-life adventure filled with optimistic solutions to humanity’s biggest challenges.
-				This is not just a film; it’s a planetary story that connects us all. With successive interconnected narratives, we aim to inspire a grassroots movement and actionable, nonviolent plans for a regenerative cooperative transition. Together, we can spark direct change and foster a vision of unity over division.
-				This is a film to change the world. Nothing less. Join us in making it happen!</p>
+			<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm">
+				scientists, activists, and indigenous leaders. 
+				You'll hear from legends like Noam Chomsky and countless other prominent figures, all voicing the urgent need for radical change and showcasing real-world solutions. 
+				That demonstrate a better future is within reach.
+			</p>
+				<img
+					src={communityleader}
+					alt="Behind the scenes 1"
+					class="w-full h-auto rounded-lg mb-4"
+				/>
+			<p class="font-bold py-10 pb-10 p-5 rounded-md text-black md:text-xl text-sm">
+			Through compelling storytelling, we explore our disconnection from nature, the historical roots of our current crises, and the possibilities and threats posed by technology. We shine a light on the various global movements advocating for change and rethinking everything—from currency and governance to food systems and societal organization. This series is a thrilling blend of dystopian narrative, action, and nature documentary, all while remaining deeply character-driven and hopeful.
+			Join us as we take viewers on a wild ride from bustling financial centers to ancient indigenous villages and into the innovative pockets of the future around the globe. This series is led by experts and driven by community voices, presenting a real-life adventure filled with optimistic solutions to humanity’s biggest challenges.
+			This is not just a film; it’s a planetary story that connects us all. With successive interconnected narratives, we aim to inspire a grassroots movement and actionable, nonviolent plans for a regenerative cooperative transition. Together, we can spark direct change and foster a vision of unity over division.
+			This is a film to change the world. Nothing less. Join us in making it happen!</p>
 		</div>
 	  </div>
 		<div class="flex md:flex-row flex-col">
