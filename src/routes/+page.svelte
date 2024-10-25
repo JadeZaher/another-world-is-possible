@@ -54,7 +54,12 @@
 				<h1 class=" font-black">Zachary Marlow.</h1>
 				<p class="text-lg leading-relaxed ">
 					<br/>
-					I'm a person making this film one day at a time with everyone I can find that believes that we be the change that makes another world possible.
+					Zachary C Marlow is a "mythopoetic auteur storyteller," filmmaker, activist, gonzo journalist, systems thinker, podcaster, 
+					and a time traveling space cowboy revolutionary from the future sent back in time to help actualize the better world we all know is possible. 
+					<br/>
+					He's shot every kind of film & video over a decade, made over 20 short films, 
+					worked for numerous impact organizations, social movements, indigenous nations, and built global organizations. 
+					His work spans every continent and delves into the most challenging problems of our time-- and helps co-create a new reality by shining a light on the radically possible. 
 				</p>
 				<p class="text-lg leading-relaxed ">
 					<br/>
