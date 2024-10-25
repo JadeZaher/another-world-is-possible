@@ -35,11 +35,13 @@
 		<h3 class="text-3xl font-bold mb-8">Synopsis</h3>
 		<p class="text-lg leading-relaxed py-10">
 			"Another World is Possible". <br/>
-			All that means is we explore alternative ways we can be structuring our world. 
-			We have evolved the ability to shape our own reality more than any species on this planet. 
-			We are responsible and capable of so much. 
-			When we come together in the right ways for the right reasons we can do all goods and undo all evils.
-			But when we fail to do that we can end up facing disasterous conflicts.
+			A planetary film odyssey about the interconnectedness of our global crises, getting to the ROOT cause in the system itself, 
+			and weaving a tapestry of solutions around the world, to build a new model that makes the old obsolete. 
+			Filmed over 5 years across 6 continents and counting, with interviews with activists, professors, scientists, 
+			growers, builders, indigenous elders, experts, systems thinkers, earth warriors and living alternatives across 
+			the map (literally) building our way out. This is the story of planet earth in its finest hour, a journey to find 
+			the others, and the future legend of an emerging movement to create a new economic system to save the world. It's all connected.
+			Currently still filming in the final act, seeking funding, collaboration and production assistance to bring the story to its thrilling conclusion. 
 		</p>
 		<div class="w-full  border-t-2 border-teal-400 rounded-t-md"></div>
 		<img
